@@ -1,22 +1,22 @@
 import { Routes } from '@angular/router';
-import { ListContactComponentComponent } from './list-contact-component/list-contact-component.component';
-import { AddContactComponentComponent } from './add-contact-component/add-contact-component.component';
-import { EditContactComponentComponent } from './edit-contact-component/edit-contact-component.component';
+import { ListContactComponent } from './list-contact/list-contact.component';
+import { AddContactComponent } from './add-contact/add-contact.component';
+import { EditContactComponent } from './edit-contact/edit-contact.component';
 
 export const routes: Routes = [
     {
         path: "",
-        component: ListContactComponentComponent,
-        title: "home"
+        component: ListContactComponent,
+        title: "ContactApp"
     },
     {
         path: 'add-contact',
-        component: AddContactComponentComponent,
+        component: AddContactComponent,
         title: "Add Contacts"
     },
     {
-        path: 'edit-contact',
-        component: EditContactComponentComponent,
+        path: 'edit-contact/:fn/:ln/:pn',
+        component: EditContactComponent,
         title: "Edit Contact"
     }
 ];
