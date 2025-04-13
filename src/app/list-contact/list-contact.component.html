@@ -1,11 +1,11 @@
 <div class="col">
     <div class="row">
-        @for(contact of contacts; track contact){
+        @for(contact of listCompService.globalContacts; track contact){
             <div style="margin: 5px 0; padding: 4px;" class="row card">
                 <h5>{{contact.fNAME}} {{contact.lNAME}}</h5>
                 <p style="margin-left: 8px">{{contact.phoneNumber}}</p><hr>
                 <div>
-                <button style="margin: 5px 10px;" class="btn btn-secondary" [routerLink]="['edit-contact', contact.fNAME, contact.lNAME, contact.phoneNumber]">edit</button>
+                <button style="margin: 5px 10px;" class="btn btn-secondary" [routerLink]="['edit-contact']" (click)="listCompService.editGetter(contact.fNAME, contact.lNAME, contact.phoneNumber)">edit</button>
                 <button style="margin: 5px 10px;" class="btn btn-danger" >delete</button>
                 </div>
             </div>

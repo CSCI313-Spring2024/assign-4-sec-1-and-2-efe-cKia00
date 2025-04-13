@@ -15,7 +15,7 @@ export const routes: Routes = [
         title: "Add Contacts"
     },
     {
-        path: 'edit-contact/:fn/:ln/:pn',
+        path: 'edit-contact',
         component: EditContactComponent,
         title: "Edit Contact"
     }

@@ -1,5 +1,5 @@
-export interface ContactData {
+export interface ContactClass {
     fNAME: string;
     lNAME: string;
-    phoneNumber: number;
+    phoneNumber: string;
 }
