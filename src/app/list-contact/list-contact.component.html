@@ -6,7 +6,7 @@
                 <p style="margin-left: 8px">{{contact.phoneNumber}}</p><hr>
                 <div>
                 <button style="margin: 5px 10px;" class="btn btn-secondary" [routerLink]="['edit-contact']" (click)="listCompService.editGetter(contact.fNAME, contact.lNAME, contact.phoneNumber)">edit</button>
-                <button style="margin: 5px 10px;" class="btn btn-danger" >delete</button>
+                <button style="margin: 5px 10px;" class="btn btn-danger" (click)="listCompService.deleteGlobalContacts(contact.phoneNumber)" routerLink="">delete</button>
                 </div>
             </div>
         }

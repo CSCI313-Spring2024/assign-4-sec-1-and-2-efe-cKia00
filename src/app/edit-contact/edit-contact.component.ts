@@ -1,21 +1,14 @@
-import { Component, inject, input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
 import { AppService } from '../app.service'; 
-import { ContactClass } from '../contact-class';
-import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-edit-contact',
-  imports: [RouterLink, FormsModule],
+  imports: [RouterLink],
   templateUrl: './edit-contact.component.html',
   styleUrl: './edit-contact.component.css'
 })
 
 export class EditContactComponent {
   editCompService = inject(AppService);
-
-  // fn = input.required<string>();
-  // ln = input.required<string>();
-  // pn = input.required<number>();
-
 }

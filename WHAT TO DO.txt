@@ -1,8 +1,0 @@
-when you click the edit button, you need to call a function that gets 
-the specific index of the contact you wish to edit, and assigns the fn, ln, and pn
-to a property in the edit-contact component. when the edit button is clicked, use two
-way data binding to insert the property in their respective input box. the use of two way data
-binding would also help us send the updated data back to the model and when we hit the save
-button, a function is called that would filter out the specific contact from the globalcontacts
-array and assign the updated fn, ln, pn properties in the edit-contact component 
-to the global contacts array.

@@ -1,7 +1,6 @@
-import { Component , inject, } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
 import { AppService } from '../app.service';
-import { ContactClass } from '../contact-class';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-list-contact',
@@ -12,6 +11,4 @@ import { ContactClass } from '../contact-class';
 
 export class ListContactComponent {
   listCompService = inject(AppService);
-  //listCompContacts: ContactClass[] = [];
- 
 }

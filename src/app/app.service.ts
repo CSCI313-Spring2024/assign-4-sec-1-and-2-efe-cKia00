@@ -23,12 +23,31 @@ export class AppService {
     this.epn = pnn;
   } 
 
-  updateGlobalContacts(firstN: string, LastN: string, phoneN: string): void
+  editGlobalContacts(FirstN: string, LastN: string, PhoneN: string): void
   {
     const index = this.globalContacts.findIndex((c: ContactClass) => c.phoneNumber == this.epn);
 
-    this.globalContacts[index].fNAME = firstN;
+    this.globalContacts[index].fNAME = FirstN;
     this.globalContacts[index].lNAME = LastN;
-    this.globalContacts[index].phoneNumber = phoneN;
+    this.globalContacts[index].phoneNumber = PhoneN;
+  }
+  
+  updateGlobalContacts(FirstN:string, LastN:string, PhoneN:string): void 
+  {
+    if (FirstN.trim() !== '' && LastN.trim() !== '' && PhoneN.trim() !== '') 
+    {
+      this.globalContacts.push({
+      fNAME: FirstN,
+      lNAME: LastN,
+      phoneNumber: PhoneN,});
+    }
+  }
+
+  deleteGlobalContacts(PhoneN:string): void
+  {
+    const index = this.globalContacts.findIndex((c: ContactClass) => c.phoneNumber == PhoneN);
+    if (index !== -1) {
+    this.globalContacts.splice(index, 1)
+  }
   }
 }

@@ -1,7 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
-import { AppService } from './app.service';
-import { ContactClass } from './contact-class';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +8,4 @@ import { ContactClass } from './contact-class';
   styleUrl: './app.component.css'
 })
 
-export class AppComponent {
-
-}
+export class AppComponent {}
